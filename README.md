@@ -43,7 +43,7 @@ git branch -M main
 git push -u origin main
 ```
 
-若远程已有 README-only 历史，可能需要 `git pull --rebase origin main` 后再 push。
+若远程已有单独的初始提交（例如仅 README），先 `git fetch origin`，再 `git merge origin/main --allow-unrelated-histories`，解决冲突后 `git push -u origin main`。
 
 ## 下一步
 
